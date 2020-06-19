@@ -1,0 +1,25 @@
+.article-item {
+  width: 580px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 28px;
+  background: #fff;
+}
+
+.article-item-right {
+  padding: 30px 20px 0 30px;
+  line-height: 1;
+}
+
+.article-item-right-title {
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.article-item-right-content {
+  font-size: 14px;
+  color: #888;
+  line-height: 1.2;
+}
+/*# sourceMappingURL=article-item.css.map */

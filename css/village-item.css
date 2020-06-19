@@ -1,0 +1,21 @@
+.village-item {
+  overflow: hidden;
+  margin-left: 10px;
+  margin-right: 10px;
+  -webkit-box-shadow: 0px 6px 14px 0px rgba(238, 238, 238, 0.6);
+          box-shadow: 0px 6px 14px 0px rgba(238, 238, 238, 0.6);
+}
+
+.village-item .title {
+  margin: 20px 0 12px 20px;
+  font-size: 18px;
+  color: #000;
+}
+
+.village-item .sub-title {
+  margin-left: 20px;
+  margin-bottom: 23px;
+  font-size: 14px;
+  color: #888;
+}
+/*# sourceMappingURL=village-item.css.map */

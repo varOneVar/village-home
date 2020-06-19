@@ -1,0 +1,362 @@
+@charset "UTF-8";
+.grid-col-1 {
+  -ms-flex: 0 0 100%;
+  -webkit-box-flex: 0;
+          flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.grid-col-2 {
+  -ms-flex: 0 0 50%;
+  -webkit-box-flex: 0;
+          flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.grid-col-3 {
+  -ms-flex: 0 0 33.333333%;
+  -webkit-box-flex: 0;
+          flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+}
+
+.grid-col-4 {
+  -ms-flex: 0 0 25%;
+  -webkit-box-flex: 0;
+          flex: 0 0 25%;
+  max-width: 25%;
+}
+
+.grid-col-5 {
+  -ms-flex: 0 0 20%;
+  -webkit-box-flex: 0;
+          flex: 0 0 20%;
+  max-width: 20%;
+}
+
+.grid-col-6 {
+  -ms-flex: 0 0 16.666667%;
+  -webkit-box-flex: 0;
+          flex: 0 0 16.666667%;
+  max-width: 16.666667%;
+}
+
+.grid-col-7 {
+  -ms-flex: 0 0 14.285714%;
+  -webkit-box-flex: 0;
+          flex: 0 0 14.285714%;
+  max-width: 14.285714%;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}
+
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section {
+  display: block;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* custom */
+a {
+  color: #7e8c8d;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.green {
+  color: #5AC467 !important;
+}
+
+.orange {
+  color: #FF833F !important;
+}
+
+.flex, .flex-align-center, .flex-center, .flex-sb-c, .flex-sa-c, .flex-column, .flex-wrapper, .flex-justify-center, .flex-sb, .flex-sa {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex1 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.flex-align-center, .flex-center, .flex-sb-c, .flex-sa-c {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.flex-wrapper {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.flex-justify-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flex-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flex-sb {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flex-sb-c {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flex-sa {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.flex-sa-c {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.block {
+  display: block;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+#app {
+  height: 100%;
+  font-size: 14px;
+}
+
+.zheader {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+  height: 80px;
+  background: #fff;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04);
+}
+
+.zheader-inner {
+  width: 1200px;
+  height: 100%;
+  margin: auto;
+}
+
+.zheader-menu {
+  height: 100%;
+}
+
+.zheader-btn-box {
+  margin-left: 142px;
+  font-size: 0px;
+}
+
+.zheader-btn {
+  display: inline-block;
+  color: #5AC467;
+  font-size: 16px;
+  width: 88px;
+  line-height: 30px;
+  text-align: center;
+  border: 1px solid #5AC467;
+  border-radius: 4px;
+  margin-right: 16px;
+  cursor: pointer;
+}
+
+.zheader-btn.active {
+  background: #5AC467;
+  color: #fff;
+}
+
+.zfooter {
+  background: #fff;
+  color: #888;
+  height: 264px;
+}
+
+.zfooter .topper {
+  height: 185px;
+  font-size: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.zfooter .topper .li {
+  margin-top: 60px;
+}
+
+.zfooter .topper .li.two {
+  margin-left: 92px;
+  margin-right: 144px;
+}
+
+.zfooter .topper .li.three {
+  margin-right: 127px;
+}
+
+.zfooter .topper .li:last-child {
+  margin-top: 40px;
+}
+
+.zfooter .topper .link, .zfooter .topper .static {
+  margin-bottom: 20px;
+  line-height: 1;
+  font-size: 14px;
+}
+
+.zfooter .topper .gz {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.zfooter .topper .logo {
+  height: 50px;
+  width: auto;
+}
+
+.zfooter .topper .qrcode {
+  width: 100px;
+  height: 100px;
+}
+
+.zfooter .tail {
+  height: 78px;
+  font-size: 12px;
+  line-height: 1;
+  text-align: center;
+}
+
+.zfooter .tail-p-t {
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.el-menu--horizontal > .el-menu-item,
+.el-menu--horizontal > .el-submenu .el-submenu__title {
+  height: 80px;
+  line-height: 80px;
+}
+
+.el-button--success:active {
+  background-color: #5AC467;
+}
+
+.el-button--warning:active {
+  background-color: #FF833F;
+}
+/*# sourceMappingURL=common.css.map */

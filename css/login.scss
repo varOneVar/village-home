@@ -1,0 +1,27 @@
+
+#login {
+  height: 100%;
+  padding-top: 80px;
+  background: url('../images/login_backdrop@2x.png') no-repeat center;
+  background-size: 100% 100%;
+}
+.login-form {
+  background: #fff;
+  width: 400px;
+  height: 400px;
+  margin: 15vh auto 50px;
+}
+
+.login-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  color: #F5F6FA;
+  font-size: 12px;
+  padding: 0 50px;
+  &-item {
+    margin-bottom: 15px;
+  }
+}

@@ -1,0 +1,13 @@
+$--color-primary: #5AC467;
+$--color-info: #C9C9C9;
+$--color-warn: #FF833F;
+$--color-danger:#F35758;
+
+$--color-text: #313131;
+
+.green {
+    color: $--color-primary !important;
+}
+.orange {
+    color: $--color-warn!important;
+}

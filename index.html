@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>魅力乡村</title>
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css" />
+  <link rel="stylesheet" href="https://unpkg.com/normalize.css/normalize.css" />
+  <link rel="stylesheet" href="./css/common.css" />
+  <link rel="stylesheet" href="./css/index.css" />
+
+</head>
+<body>
+  <div id="app">
+    <template>
+      <Zheader />
+    </template>
+    <section class="container">
+      <div class="toper-search flex-center">
+        <div>
+          <h2 class="toper-search-title">搜一搜你的家乡</h2>
+          <div class="toper-search-box flex-align-center">
+            <div class="get-location flex-center">
+              <span class="addr">长沙市</span>
+              <img class="arrow" src="./images/home_under@2x.png"/>
+            </div>
+            <input class="toper-search-box-input" :value="search" placeholder="搜索您的家乡" />
+            <el-button class="toper-search-box-button search" type="success">搜索</el-button>
+            <el-button class="toper-search-box-button create" type="warning">创建村</el-button>
+          </div>
+        </div>
+      </div>
+      <div class="section white">
+        <template>
+          <home-title title="中国魅力乡村" sub-title="中国魅力乡村，中国魅力乡村中国魅力乡村"/>
+        </template>
+        <div class="flex-justify-center">
+          <template>
+            <village-item
+              v-for="(item, idx) of villageList"
+              :key="idx"
+              :title="item.title"
+              :sub-title="item.subTitle"
+              :image="item.image"
+            />
+          </template>
+        </div>
+        <div class="add-more">加载更多</div>
+      </div>
+      <div class="section gray">
+        <template>
+          <home-title title="乡村特色风采" sub-title="中国魅力乡村，中国魅力乡村中国魅力乡村"/>
+        </template>
+        <div class="flex-justify-center">
+          <div v-for="(item, idx) of articleList" :key="idx">
+            <template>
+              <article-item
+                v-for="(v, f) of item"
+                :key="f"
+                :title="v.title"
+                :content="v.content"
+                :image="v.image"
+              />
+            </template>
+          </div>
+        </div>
+        <div class="add-more">加载更多</div>
+      </div>
+      <div class="section white">
+        <template>
+          <home-title title="乡村特色视频" :title-style="titleStyle"/>
+        </template>
+        <div class="add-more">加载更多</div>
+      </div>
+      <div class="section white">
+        <template>
+          <home-title title="乡村精选评论" sub-title="中国魅力乡村，中国魅力乡村中国魅力乡村"/>
+        </template>
+        <div class="add-more">加载更多</div>
+      </div>
+    </section>
+    <template>
+      <Zfooter/>
+    </template>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js"></script>
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+  <script src="./js/utils.js"></script>
+</body>
+<script src="./components/Zheader.js"></script>
+<script src="./components/Zfooter.js"></script>
+<script src="./components/homeTitle.js"></script>
+<script src="./components/village-item.js"></script>
+<script src="./components/article-item.js"></script>
+<script>
+  const app = new Vue({
+    el: '#app',
+    data(){
+      return {
+        titleStyle: {
+          fontSize: '28px',
+        },
+        search: '',
+        villageList: [{
+          image: '',
+          title: '岳阳县张谷英镇张谷英村',
+          subTitle: '岳阳县-张谷英镇-张谷英村'
+        }, {
+          image: '',
+          title: '岳阳县张谷英镇张谷英村',
+          subTitle: '岳阳县-张谷英镇-张谷英村'
+        }, {
+          image: '',
+          title: '岳阳县张谷英镇张谷英村',
+          subTitle: '岳阳县-张谷英镇-张谷英村'
+        }, {
+          image: '',
+          title: '岳阳县张谷英镇张谷英村',
+          subTitle: '岳阳县-张谷英镇-张谷英村'
+        }],
+        articleList: []
+      }
+    },
+    created() {
+      this.articleList = chunkArr([{
+          image: '',
+          title: '塔河岸边罗布人 沙海深处驼铃韵...',
+          content: '罗布人村寨位于尉犁县城西南35公里处，距库尔勒市南85公里处。村寨方圆72平方公里...'
+        }, {
+          image: '',
+          title: '塔河岸边罗布人 沙海深处驼铃韵...',
+          content: '罗布人村寨位于尉犁县城西南35公里处，距库尔勒市南85公里处。村寨方圆72平方公里...'
+        }, {
+          image: '',
+          title: '塔河岸边罗布人 沙海深处驼铃韵...',
+          content: '罗布人村寨位于尉犁县城西南35公里处，距库尔勒市南85公里处。村寨方圆72平方公里...'
+        }, {
+          image: '',
+          title: '塔河岸边罗布人 沙海深处驼铃韵...',
+          content: '罗布人村寨位于尉犁县城西南35公里处，距库尔勒市南85公里处。村寨方圆72平方公里...'
+        }])
+    },
+    components: {
+      Zheader,
+      Zfooter,
+      'home-title': homeTitle,
+      'village-item': villageItem,
+      'article-item': articleItem,
+    }
+  })
+
+</script>
+</html>

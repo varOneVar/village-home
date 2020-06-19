@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>登陆注册-魅力乡村</title>
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css" />
+  <link rel="stylesheet" href="https://unpkg.com/normalize.css/normalize.css" />
+  <link rel="stylesheet" href="./css/common.css" />
+  <link rel="stylesheet" href="./css/login.css" />
+</head>
+
+<body>
+  <div id="login">
+    <template>
+      <Zheader />
+    </template>
+    <div class="login-form">
+      <div class="form-title-box flex">
+        <p class="flex1 text-center form-title-item">
+          <span>手机号登陆</span>
+        </p>
+        <p class="flex1 text-center form-title-item">
+          <span>账号登陆</span>
+        </p>
+      </div>
+      <div class="input-item">
+        <span class="label">+86</span>
+        <input class="input" placeholder="请输入手机号码" />
+      </div>
+      <div class="input-item">
+        <input class="input" placeholder="请输入动态码" />
+        <span class="code">获取动态码</span>
+      </div>
+      <div class="input-item">
+        <input class="input" placeholder="请输入动态码" />
+        <span class="code">获取动态码</span>
+      </div>
+    </div>
+    <div class="login-footer text-center">
+      <p class="login-footer-item">营业执照注册号：91430111MA4LCB2M1X - ICP备案号：湘ICP备17007263号</p>
+      <p class="login-footer-item">©Copyright 2017-{{year}} 湖南农城旅游度假开发有限公司</p>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js"></script>
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+</body>
+<script src="./components/Zheader.js"></script>
+<script>
+  const app = new Vue({
+    el: '#login',
+    data() {
+      return {
+        username: '',
+        password: '',
+        year: new Date().getFullYear()
+      }
+    },
+    components: { Zheader }
+  })
+
+</script>
+
+</html>
