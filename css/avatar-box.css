@@ -1,0 +1,13 @@
+.avatar-wrapper {
+  overflow: hidden;
+}
+
+.avatar-wrapper .comment-avatar {
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.avatar-wrapper .right-box {
+  height: 100%;
+}
+/*# sourceMappingURL=avatar-box.css.map */

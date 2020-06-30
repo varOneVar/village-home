@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>视频详情-魅力乡村</title>
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css" />
+  <link rel="stylesheet" href="https://unpkg.com/normalize.css/normalize.css" />
+  <link rel="stylesheet" href="./css/common.css" />
+  <link rel="stylesheet" href="./css/user-center.css" />
+
+</head>
+
+<body>
+  <div id="app">
+    <template>
+      <Zheader />
+    </template>
+    <section class="container flex">
+        <div class="user-left">
+            <nav
+                class="user-left-nav"
+                :class="{border:nav.border, active: idx===activeIndex}"
+                v-for="(nav,idx) of navList" :key="idx"
+                @click="changeNav(nav, idx)">
+                {{nav.label}}
+            </nav>
+        </div>
+        <div class="user-right">
+            <h2 class="title">{{title}}</h2>
+            <section class="section">
+                <component :is="isComponent" :flag="flag" />
+            </section>
+        </div>
+    </section>
+    <template>
+      <z-aside />
+    </template>
+    <template>
+      <Zfooter/>
+    </template>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js"></script>
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+  <script src="https://unpkg.com/vue-baidu-map@0.21.22/index.js"></script>
+  <script src="./js/utils.js"></script>
+</body>
+<script src="./components/z-upload.js"></script>
+<script src="./components/z-city.js"></script>
+<script src="./components/Zheader.js"></script>
+<script src="./components/Zfooter.js"></script>
+<script src="./components/Zaside.js"></script>
+<script src="./components/user-center/village-manager.js"></script>
+<script src="./components/user-center/upload-item.js"></script>
+<script src="./components/user-center/person-info.js"></script>
+<script src="./components/user-center/collect-village.js"></script>
+<script src="./components/user-center/password-set.js"></script>
+<style>
+.el-pagination.is-background .el-pager li:not(.disabled).active {
+    background-color: #5AC467;
+}
+
+.el-pagination.is-background .btn-next, .el-pagination.is-background .btn-prev,
+.el-pagination.is-background .el-pager li {
+    border: 1px solid #E5E5E5;
+    width: 40px;
+    height: 40px;
+    color: #999;
+    text-align: center;
+    line-height: 40px;
+}
+.el-pagination.is-background .btn-next, .el-pagination.is-background .btn-prev {
+    width: 68px;
+}
+.el-pagination.is-background .el-pager li:not(.active):hover {
+    color: #5AC467;
+}
+.el-pagination button, .el-pagination span:not([class*=suffix]) {
+    line-height: 40px;
+    height: 40px;
+}
+</style>
+<script>
+  Vue.use(VueBaiduMap.default, {
+      ak: '9yDUaKGksMcvbggD3gnoqsrDG3uzKEAZ'
+  })
+  const app = new Vue({
+    el: '#app',
+    data(){
+      return {
+          activeIndex: 0,
+          isComponent: 'village-manager',
+          flag: 'image',
+          title: '乡村信息',
+          navList: [],
+      }
+    },
+    methods: {
+        changeNav({title, value, label, flag }, idx) {
+            this.activeIndex = idx
+            this.isComponent = value
+            this.title = title
+            flag && (this.flag = flag)
+        },
+    },
+    created() {
+       this.navList = [{
+            label: '村务管理',
+            value: 'village-manager',
+            title: '乡村信息',
+       }, {
+            label: '发布照片',
+            value: 'upload-item',
+            title: '特色照片管理',
+            flag: 'image'
+       }, {
+            label: '发布资讯',
+            value: 'upload-item',
+            title: '特色资讯管理',
+            flag: 'article'
+       }, {
+            label: '发布视频',
+            value: 'upload-item',
+            title: '特色视频管理',
+            flag: 'video'
+       }, {
+            label: '个人资料',
+            value: 'person-info',
+            border: true,
+            title: '基本信息',
+       }, {
+            label: '收藏乡村',
+            value: 'collect-village',
+            title: '收藏列表',
+       }, {
+            label: '密码设置',
+            value: 'password-set',
+            title: '密码修改',
+       }]
+    },
+    components: {
+      Zheader,
+      Zfooter,
+      'password-set': passwordSet,
+      'village-manager': villageManager,
+      'upload-item': uploadItem,
+      'person-info': personInfo,
+      'collect-village': collectVillage
+    }
+  })
+
+</script>
+</html>

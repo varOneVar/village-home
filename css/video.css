@@ -1,0 +1,104 @@
+.green {
+  color: #5AC467 !important;
+}
+
+.orange {
+  color: #FF833F !important;
+}
+
+.video-wrapper {
+  margin: 0 10px 20px;
+  min-height: 330px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 6px 14px 0px rgba(238, 238, 238, 0.6);
+          box-shadow: 0px 6px 14px 0px rgba(238, 238, 238, 0.6);
+  overflow: hidden;
+}
+
+.video-box {
+  position: relative;
+  width: 380px;
+  height: 260px;
+  overflow: hidden;
+}
+
+.video-num {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  line-height: 1;
+  padding: 7px 15px;
+  font-size: 14px;
+  border-radius: 50px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.video-title {
+  font-size: 16px;
+  color: #000;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+#app {
+  min-height: 100%;
+  padding-top: 80px;
+  background: #F5F6FA;
+}
+
+.section {
+  overflow: hidden;
+}
+
+.pages {
+  margin-top: 17px;
+  margin-bottom: 60px;
+}
+
+.container {
+  width: 1180px;
+  margin: auto;
+}
+
+.topper {
+  width: 1180px;
+  margin: 0 auto;
+}
+
+.title-box {
+  position: relative;
+  padding: 20px 0 40px;
+}
+
+.title-box .title {
+  font-size: 28px;
+  line-height: 1;
+  color: #000;
+}
+
+.title-box .icon {
+  font-size: 12px;
+  color: #fff;
+  margin-right: 4px;
+}
+
+.title-box .push-btn {
+  position: absolute;
+  width: 116px;
+  bottom: 24px;
+  right: 0;
+}
+
+.mark-addr {
+  padding: 18px 0;
+  color: #999;
+  font-size: 14px;
+}
+
+.el-breadcrumb__inner,
+.el-breadcrumb__item:last-child .el-breadcrumb__inner {
+  color: #999;
+  font-size: 14px;
+}
+/*# sourceMappingURL=video.css.map */

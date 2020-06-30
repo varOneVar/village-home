@@ -4,14 +4,9 @@ const Zfooter = {
      
     }
   },
-  methods: {
-    handleSelect(index) {
-      console.log(index)
-    }
-  },
   template: `
     <div class="zfooter">
-        <ul class="topper">
+        <ul class="zfooter-topper">
             <li class="li first">
                 <img class="logo" src="./images/footer_logo2@2x.png" />
             </li>
@@ -30,9 +25,9 @@ const Zfooter = {
                 <p class="text-center gz">关注公众号</p>
             </li>
         </ul>
-        <div class="tail">
-            <p class="tail-p-t">营业执照注册号：91430111MA4LCB2M1X - ICP备案号：湘ICP备17007263号</p>
-            <p class="tail-p-b">©Copyright 2017-{{new Date().getFullYear()}} 湖南农城旅游度假开发有限公司</p>
+        <div class="zfooter-tail">
+            <p class="zfooter-tail-p-t">营业执照注册号：91430111MA4LCB2M1X - ICP备案号：湘ICP备17007263号</p>
+            <p class="zfooter-tail-p-b">©Copyright 2017-{{new Date().getFullYear()}} 湖南农城旅游度假开发有限公司</p>
         </div>
     </div>
   `

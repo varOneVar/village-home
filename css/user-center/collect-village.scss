@@ -1,0 +1,29 @@
+.collect-village {
+    padding-bottom: 40px;
+}
+.collect-item {
+    margin-top: 20px;
+    &-image {
+        width: 140px;
+        height: 104px;
+        margin-right:20px;
+    }
+    &-str {
+        line-height: 1;
+    }
+    &-title {
+        font-size: 18px;
+        color: #000;
+        margin-top:16px;
+        margin-bottom:20px;
+    }
+    &-addr {
+        font-size: 14px;
+        color: #888;
+    }
+    &-right {
+        font-size: 16px;
+        color: #5AC467;
+        cursor: pointer;
+    }
+}

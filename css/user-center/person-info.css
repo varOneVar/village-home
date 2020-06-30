@@ -1,0 +1,64 @@
+.person-info {
+  overflow: hidden;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.person-info .person-left {
+  margin-top: 40px;
+  margin-bottom: 18px;
+}
+
+.person-info .person-item {
+  margin-bottom: 30px;
+}
+
+.person-info .person-item-label {
+  margin-right: 10px;
+}
+
+.person-info .person-item-p {
+  margin-right: 19px;
+}
+
+.person-info .person-item-input {
+  width: 220px;
+  height: 32px;
+  margin-right: 19px;
+}
+
+.person-info .person-item-action-str {
+  color: #5AC467;
+  cursor: pointer;
+}
+
+.person-info .el-upload--picture-card, .person-info .el-upload, .person-info .el-upload-dragger {
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  background-color: #F5F6FA;
+  position: relative;
+}
+
+.person-info .edit-str {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.person-info .edit-default-img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+}
+/*# sourceMappingURL=person-info.css.map */

@@ -1,0 +1,66 @@
+.home-comment {
+  width: 370px;
+  height: 300px;
+  padding: 30px 35px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 6px 14px 0px rgba(238, 238, 238, 0.6);
+          box-shadow: 0px 6px 14px 0px rgba(238, 238, 238, 0.6);
+  background: #fff;
+  overflow: hidden;
+}
+
+.home-comment .star-box {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.home-comment .star-label {
+  font-size: 16px;
+  color: #000;
+  margin-right: 18px;
+}
+
+.home-comment .star {
+  margin-right: 2px;
+}
+
+.home-comment .comment {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #888;
+}
+
+.home-comment .avatar-wrapper {
+  overflow: hidden;
+}
+
+.home-comment .avatar-wrapper .comment-avatar {
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.home-comment .avatar-wrapper .right-box {
+  height: 60px;
+  margin-left: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.home-comment .avatar-wrapper .right-box .right-name {
+  font-size: 16px;
+  color: #000;
+}
+
+.home-comment .avatar-wrapper .right-box .right-bottom {
+  font-size: 14px;
+  color: #888;
+}
+/*# sourceMappingURL=home-comment.css.map */

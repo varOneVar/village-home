@@ -1,58 +1,57 @@
 const videoItem = {
     props: {
-        title: {
-            type: String,
-            default: ''
+        item: {
+            type: Object,
+            default() {
+                return {}
+            }
         },
-        subTitle: {
-            type: String,
-            default: ''
-        },
-
-        image: {
+        id: {
             type: String,
             default: ''
         }
     },
+    methods: {
+        createdVideoBox (h) {
+            const e = this.item.url ? h(
+                'div',
+                { attrs: { id: this.id, class: 'video' }, style: {
+                    width: '380px',
+                    height: '260px',
+                },}
+            ) : h(
+                'el-image',
+                { attrs: { class: 'video' }, style: {
+                    width: '380px',
+                    height: '260px',
+                }, props: { fit: 'cover', src: this.item.url, } }
+            )
+            return h(
+                'div',
+                { attrs: { class: 'video-box' } },
+                [
+                    e,
+                    h(
+                        'span',
+                        { attrs: { class: 'video-num' }},
+                        `${this.item.num||0}人播放`
+                    )
+                ]
+            )
+        }
+    },
     render(h) {
-        const { title, subTitle, image } = this;
-        const children = [h(
-            'el-image',
-            {
-                style: {
-                    width: '280px',
-                    height: '210px'
-                },
-                props: {
-                    src: image,
-                    fit: 'cover'
-                }
-            },
-        ), h(
-            'h2',
-            {
-                attrs: {
-                    class: 'title'
-                },
-            },
-            title
-        ), h(
-            'p',
-            {
-                attrs: {
-                    class: 'sub-title'
-                },
-            },
-            subTitle
-        )]
         return h(
             'div',
             {
                 attrs: {
-                    class: 'village-item'
+                    class: 'video-wrapper'
                 },
             },
-            children
+            [
+                this.createdVideoBox(h),
+                h('p', { attrs: { class: 'video-title' } }, this.item.title)
+            ]
         )
     },
   }

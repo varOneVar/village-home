@@ -1,0 +1,51 @@
+.upload-item {
+  margin-bottom: 95px;
+}
+
+.upload-item .el-table td, .upload-item .el-table th {
+  font-size: 14px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0;
+}
+
+.upload-item .el-table thead th, .upload-item .el-table thead tr {
+  background-color: #eee;
+}
+
+.upload-item .total {
+  text-align: right;
+  font-size: 12px;
+  color: #999;
+  margin-top: 12px;
+}
+
+.upload-item .btn-box {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.upload-item .btn-box .btn {
+  width: 80px;
+  height: 40px;
+}
+
+.upload-item .push {
+  width: 116px;
+  height: 40px;
+}
+
+.dialog-content .item {
+  margin-bottom: 30px;
+}
+
+.dialog-content .label {
+  width: 120px;
+  padding-left: 30px;
+}
+
+.dialog-content .input {
+  width: 280px;
+  height: 40px;
+}
+/*# sourceMappingURL=upload-item.css.map */

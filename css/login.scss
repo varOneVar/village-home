@@ -1,3 +1,4 @@
+@import './variables.scss';
 
 #login {
   height: 100%;
@@ -9,9 +10,149 @@
   background: #fff;
   width: 400px;
   height: 400px;
+  padding: 0 50px;
   margin: 15vh auto 50px;
+  overflow: hidden;
+  .go-link {
+    display: block;
+    text-align: center;
+    color: $--color-primary;
+    font-size: 14px;
+  }
 }
 
+.form-title {
+  &-box {
+    margin-top: 60px;
+    padding-bottom: 16px;
+    margin-bottom: 40px;
+  }
+  &-item {
+    font-size: 16px;
+    cursor: pointer;
+    &.active .span{
+      position: relative;
+      color: $--color-primary;
+      &:after {
+        content: '';
+        position: absolute;
+        left: -17px;
+        right: -17px;
+        bottom: -16px;
+        height: 2px;
+        background-color: $--color-primary;
+      }
+    }
+  }
+
+}
+.input-item {
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid $--color-primary;
+  margin-bottom: 10px;
+  &.mobile {
+    position: relative;
+    .tip {
+      position: absolute;
+      height: 12px;
+      line-height: 14px;
+      right: 0;
+      top: -22px;
+      color: $--color-danger;
+      font-size: 14px;
+      &-icon {
+        font-size: 14px;
+        margin-right: 4px;
+      }
+    }
+  }
+  .label {
+    margin-left: 20px;
+    font-size:14px;
+    color: #454444;
+  }
+  .input {
+    font-size: 14px;
+    text-indent: 20px;
+    color: #454444;
+    border: none;
+    outline: none;
+    &:active {
+      border: none;
+      outline: none;
+    }
+    ::placeholder {
+      color: #A1A1A1;
+    }
+  }
+  .code {
+    color: $--color-primary;
+    font-size: 14px;
+    padding: 0 15px;
+    cursor: pointer;
+    position: relative;
+    &.disabled {
+      color: #A1A1A1;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      margin-top: -10px;
+      left: 0;
+      height: 20px;
+      width: 1px;
+      background: #E5E5E5;
+    }
+  }
+}
+.slide-box {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background: #E8E8E8;
+  position: relative;
+  font-size: 14px;
+  color: #A1A1A1;
+  border-radius:4px;
+}
+.slide-image {
+  width: 60px;
+  height: 40px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 3;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+.slide-process {
+  height: 40px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+  background-color: $--color-warn;
+}
+.login-btn {
+  width: 100%;
+  height: 40px;
+  margin: 20px 0;
+  background: $--color-primary;
+}
+.slide-text {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  text-align: center;
+  &.success {
+    color: #fff;
+  }
+}
 .login-footer {
   position: fixed;
   bottom: 0;

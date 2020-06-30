@@ -1,0 +1,36 @@
+.collect-village {
+  padding-bottom: 40px;
+}
+
+.collect-item {
+  margin-top: 20px;
+}
+
+.collect-item-image {
+  width: 140px;
+  height: 104px;
+  margin-right: 20px;
+}
+
+.collect-item-str {
+  line-height: 1;
+}
+
+.collect-item-title {
+  font-size: 18px;
+  color: #000;
+  margin-top: 16px;
+  margin-bottom: 20px;
+}
+
+.collect-item-addr {
+  font-size: 14px;
+  color: #888;
+}
+
+.collect-item-right {
+  font-size: 16px;
+  color: #5AC467;
+  cursor: pointer;
+}
+/*# sourceMappingURL=collect-village.css.map */

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>特色资讯-魅力乡村</title>
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css" />
+  <link rel="stylesheet" href="https://unpkg.com/normalize.css/normalize.css" />
+  <link rel="stylesheet" href="./css/common.css" />
+  <link rel="stylesheet" href="./css/video.css" />
+
+</head>
+
+<body>
+  <div id="app">
+    <template>
+      <Zheader />
+    </template>
+    <header class="topper">
+        <div class="mark-addr flex-align-center">
+            您的位置：
+            <el-breadcrumb separator-class="el-icon-arrow-right">
+                <el-breadcrumb-item>首页</el-breadcrumb-item>
+                <el-breadcrumb-item>湖南</el-breadcrumb-item>
+                <el-breadcrumb-item>长沙</el-breadcrumb-item>
+            </el-breadcrumb>
+        </div>
+        <div class="title-box flex-sb-c">
+            <h2 class="title">特色视频</h2>
+            <el-button class="push-btn" type="success"><i class="icon el-icon-plus"></i> 发布视频</el-button>
+        </div>
+    </header>
+    <section class="container">
+      <!-- 中国魅力乡村 -->
+      <div class="section">
+        <div class="flex-justify-center flex-wrap">
+            <div class="flex-align-center" v-for="(item, idx) of videoList" :key="idx">
+                <template>
+                <video-item
+                    v-for="(v, f) of item"
+                    :key="`video-${idx}-${f}`"
+                    :item="v"
+                    :id="`video-${idx}-${f}`"
+                />
+                </template>
+            </div>
+          </div>
+      </div>
+      <div class="pages text-center">
+          <template>
+            <el-pagination
+                background
+                prev-text="上一页"
+                next-text="下一页"
+                layout="prev, pager, next"
+                :total="1000">
+            </el-pagination>
+          </template>
+      </div>
+    </section>
+    <template>
+      <z-aside />
+    </template>
+    <template>
+      <Zfooter/>
+    </template>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js"></script>
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+  <script src="./js/utils.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/xgplayer/browser/index.js"></script>
+  <script src="./js/video.js"></script>
+</body>
+<script src="./components/Zheader.js"></script>
+<script src="./components/Zfooter.js"></script>
+<script src="./components/Zaside.js"></script>
+<script src="./components/video-item.js"></script>
+<style>
+.el-pagination.is-background .el-pager li:not(.disabled).active {
+    background-color: #5AC467;
+}
+
+.el-pagination.is-background .btn-next, .el-pagination.is-background .btn-prev,
+.el-pagination.is-background .el-pager li {
+    border: 1px solid #E5E5E5;
+    width: 40px;
+    height: 40px;
+    color: #999;
+    text-align: center;
+    line-height: 40px;
+}
+.el-pagination.is-background .btn-next, .el-pagination.is-background .btn-prev {
+    width: 68px;
+}
+.el-pagination.is-background .el-pager li:not(.active):hover {
+    color: #5AC467;
+}
+.el-pagination button, .el-pagination span:not([class*=suffix]) {
+    line-height: 40px;
+    height: 40px;
+}
+</style>
+<script>
+  const app = new Vue({
+    el: '#app',
+    data(){
+      return {
+        search: '',
+        value: [],
+        articleList: [],
+      }
+    },
+    methods: {
+        handleChange(value) {
+            console.log(value);
+        }
+    },
+    mounted() {
+      this.vlist = []
+      this.$nextTick(() => {
+        this.videoList.forEach((v,i) => {
+          v.forEach((e, j) => {
+            const video = videoPlayerInstance(`video-${i}-${j}`, e.url, e.poster, {
+              width: '380px',
+              height: '260px',
+            })
+            this.vlist.push(video)
+          })
+        });
+      })
+    },
+    created() {
+        const arr = [...Array(9)].map(v => ({
+            url: 'http://s2.pstatp.com/cdn/expire-1-M/byted-player-videos/1.0.0/xgplayer-demo.mp4',
+            title: '美丽乡村：黄河边上美自来',
+            poster: 'http://www.yuanlinshigong.com/data/upload/image/20180313/1520926816936983.jpg',
+            num: 28
+        }))
+        this.videoList = chunkArr(arr, 3)
+    },
+    components: {
+      Zheader,
+      Zfooter,
+      'video-item': videoItem,
+      'z-aside':Zaside
+    }
+  })
+
+</script>
+</html>

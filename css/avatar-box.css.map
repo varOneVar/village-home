@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,eAAe,CAAC;EACZ,QAAQ,EAAE,MAAM;CAQnB;;AATD,AAEI,eAFW,CAEX,eAAe,CAAC;EACZ,QAAQ,EAAE,MAAM;EAChB,aAAa,EAAE,GAAG;CACrB;;AALL,AAMI,eANW,CAMX,UAAU,CAAC;EACP,MAAM,EAAE,IAAI;CACf",
+    "sources": [
+        "avatar-box.scss"
+    ],
+    "names": [],
+    "file": "avatar-box.css"
+}

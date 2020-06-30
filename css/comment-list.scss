@@ -1,0 +1,89 @@
+.comment-list {
+    &-title-box {
+        height: 59px;
+        line-height: 59px;
+        color: #4BB759;
+        font-size: 16px;
+        padding-left: 78px;
+        border-bottom: 1px solid #eee;
+    }
+    .send-comment-area {
+        margin-top: 20px;
+        margin-bottom: 16px;
+        .textarea {
+            display: block;
+            width: 720px;
+            margin: auto;
+            border-radius:4px;
+            .el-textarea__inner {
+                min-height: 80px;
+                color: #000;
+                background-color: #EEEEEE;
+            }
+            .el-input__count {
+                background-color: #EEEEEE;
+            }
+        }
+    }
+    .send-box {
+        text-align: right;
+        margin-right: 80px;
+        margin-bottom: 30px;
+    }
+    .send-btn {
+        font-size: 14px;
+    }
+    .el-button--success.is-disabled {
+        color: #bbb;
+        background-color: #eee;
+        outline: none;
+        border-color: #eee;
+    }
+    .comment-item {
+        margin:0 80px 40px;
+        border-bottom: 1px solid #eee;
+        .avatar-warpper {
+            margin-bottom: 20px;
+            .avatar {
+                margin-right: 17px;
+            }
+            .base-info {
+                height: 40px;
+                .name {
+                    font-size: 16px;
+                    color:#000
+                }
+                .time {
+                    font-size: 12px;
+                    color: #999;
+                }
+            }
+        }
+        .content-box {
+            margin-bottom: 20px;
+            .content {
+                color: #454444;
+                font-size: 14px;
+                line-height: 1.5;
+            }
+        }
+    }
+    .reply-box {
+        overflow: hidden;
+        padding: 20px 10px 0 20px;
+        background:rgba(245,246,250,1);
+        border:1px solid rgba(238,238,238,1);
+    }
+    .reply-item {
+        margin-bottom: 20px;
+        font-size: 14px;
+        color: #000;
+        line-height: 1.6;
+    }
+    .options {
+        line-height: 50px;
+        justify-content: flex-end;
+        font-size: 12px;
+        color: #666;
+    }
+}

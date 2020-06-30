@@ -1,0 +1,117 @@
+.green {
+  color: #5AC467 !important;
+}
+
+.orange {
+  color: #FF833F !important;
+}
+
+.village-item {
+  overflow: hidden;
+  margin: 0 10px 30px;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 6px 14px 0px rgba(238, 238, 238, 0.6);
+          box-shadow: 0px 6px 14px 0px rgba(238, 238, 238, 0.6);
+}
+
+.village-item:hover {
+  -webkit-box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+}
+
+.village-item .title {
+  margin: 20px 0 12px 20px;
+  font-size: 18px;
+  color: #000;
+}
+
+.village-item .sub-title {
+  margin-left: 20px;
+  margin-bottom: 23px;
+  font-size: 14px;
+  color: #888;
+}
+
+#app {
+  min-height: 100%;
+  padding-top: 80px;
+  background: #F5F6FA;
+}
+
+.section {
+  overflow: hidden;
+}
+
+.pages {
+  margin-top: 17px;
+  margin-bottom: 60px;
+}
+
+.topper {
+  width: 1180px;
+  margin: 0 auto 30px;
+}
+
+.mark-addr {
+  padding: 18px 0;
+  color: #999;
+  font-size: 14px;
+}
+
+.select-area {
+  width: 517px;
+  margin-right: 8px;
+}
+
+.search {
+  width: 396px;
+  margin-right: 8px;
+}
+
+.search-btn {
+  width: 100px;
+}
+
+.el-breadcrumb__inner {
+  color: #999;
+}
+
+.change-condition {
+  background-color: #fff;
+  padding: 20px 40px;
+}
+
+.change-condition .label {
+  font-size: 14px;
+  color: #000;
+}
+
+.choose-area {
+  padding: 11px;
+}
+
+.choose-area .tags {
+  display: inline-block;
+  line-height: 1;
+  border: 1px solid #EEEEEE;
+  padding: 7px 6px 7px 12px;
+  margin-right: 8px;
+  background-color: #fff;
+  color: #5AC467;
+}
+
+.choose-area .tags .icon {
+  margin-left: 10px;
+  font-size: 8.5px;
+  color: #A0A0A0;
+  cursor: pointer;
+}
+
+.white {
+  background: #fff;
+}
+
+.gray {
+  background: #F5F6FA;
+}
+/*# sourceMappingURL=search.css.map */

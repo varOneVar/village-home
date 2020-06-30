@@ -1,46 +1,52 @@
 const Zheader = {
+  props: {
+    status: {
+      type: String,
+      default: ''
+    }
+  },
   data() {
     return {
-      status: 'login',
       activeIndex: '1',
       navList: [
         {
           index: '1',
           label: '首页',
-          path: '/'
+          path: './index.html'
         }, {
           index: '2',
           label: '应用下载',
           children: [{
             index: '2-1',
             label: 'IOS下载',
-            path: '/ios'
+            path: './index.html'
           }, {
               index: '2-2',
               label: 'Android下载',
-              path: '/android'
+              path: './index.html'
             }]
         }, {
           index: '3',
           label: '关于我们',
-          path: '/path'
+          path: './index.html'
         }
       ]
     }
   },
   methods: {
     handleSelect(index) {
-      console.log(index)
       // this.activeIndex =
     }
   },
   template: `
     <div class="zheader">
       <div class="zheader-inner flex-sb-c">
-        <el-image
-          style="width: 313px; height: 61px"
-          src="./images/logo@2x.png"
-          fit="cover"></el-image>
+        <a href="./index.html">
+          <el-image
+            style="width: 313px; height: 61px"
+            src="./images/logo@2x.png"
+            fit="cover"></el-image>
+        </a>
         <div class="flex-align-center">
           <el-menu
             :default-active="activeIndex" class="zheader-menu" mode="horizontal" @select="handleSelect"
@@ -57,7 +63,9 @@ const Zheader = {
                   :key="v.index"
                   :index="v.index"
                 >
-                  {{v.label}}
+                <a :href="v.path">
+                {{nav.label}}
+                </a>
                 </el-menu-item>
               </el-submenu>
               <el-menu-item
@@ -65,18 +73,23 @@ const Zheader = {
                 :key="nav.index"
                 :index="nav.index"
               >
-                {{nav.label}}
+              <a :href="nav.path">
+              {{nav.label}}
+              </a>
               </el-menu-item>
             </template>
           </el-menu>
           <div class="zheader-btn-box">
-            <span class="zheader-btn"
-             :class="{active:status==='login'}">
+            <a class="zheader-btn"
+              :href="status==='login'?'javascript:void(0);':'./login.html'"
+             :class="{active:status==='login'||!status}">
              登陆
-            </span>
-            <span class="zheader-btn" :class="{active:status==='register'}">
+            </a>
+            <a class="zheader-btn"
+            :href="status==='register'?'javascript:void(0);':'./register.html'"
+              :class="{active:status==='register'}">
               注册
-            </span>
+            </a>
           </div>
         </div>
       </div>

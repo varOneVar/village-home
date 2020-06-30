@@ -1,2 +1,31 @@
-.video-item {
+.video-wrapper {
+    margin: 0 10px 20px;
+    min-height: 330px;
+    background-color: #fff;
+    box-shadow:0px 6px 14px 0px rgba(238,238,238,0.6);
+    overflow: hidden;
+}
+.video-box {
+    position: relative;
+    width: 380px;
+    height: 260px;
+    overflow: hidden;
+}
+
+.video-num {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    line-height: 1;
+    padding: 7px 15px;
+    font-size: 14px;
+    border-radius: 50px;
+    color: #fff;
+    background-color: rgba(0,0,0,.3);
+}
+.video-title {
+    font-size: 16px;
+    color: #000;
+    margin-left: 10px;
+    margin-top: 20px;
 }

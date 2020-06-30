@@ -1,0 +1,86 @@
+@import './variables.scss';
+@import './user-center/collect-village.scss';
+@import './user-center/password-set.scss';
+@import './user-center/upload-item.scss';
+@import './user-center/village-manager.scss';
+@import './user-center/person-info.scss';
+
+#app {
+    min-height: 100%;
+    padding-top: 80px;
+    background: #F5F6FA;
+}
+.pages {
+    margin-top: 17px;
+    margin-bottom: 40px;
+}
+.container {
+    width: 990px;
+    margin: auto;
+    padding: 30px 0;
+    align-items: flex-start;
+    min-height: calc(100% - 344px);
+}
+.user-left {
+    background: #fff;
+    width: 170px;
+    margin-right: 20px;
+    &-nav {
+        line-height: 50px;
+        text-align: center;
+        font-size: 14px;
+        color: #454444;
+        cursor: pointer;
+        &.border {
+            border-top: 8px solid #F5F6FA;
+        }
+        &.active {
+            background-color: $--color-primary;
+            color: #fff;
+        }
+    }
+}
+.user-right {
+    width: 800px;
+    padding: 0 20px;
+    background-color: #fff;
+    .title {
+        line-height: 50px;
+        border-bottom: 1px solid #E5E5E5;
+        font-size: 14px;
+        color: $--color-primary;
+    }
+}
+
+.user-info-item {
+    margin-bottom: 30px;
+    color: #454444;
+    font-size: 14px;
+    &-label {
+        color: #000000;
+        width: 100px;
+        padding-left: 9px;
+    }
+    &-input {
+        height: 40px;
+        width: 240px;
+        margin-right: 10px;
+    }
+    &-textarea {
+        width: 500px;
+    }
+}
+.el-upload--picture-card,  .el-upload, .el-upload-dragger{
+    width: 80px;
+    line-height: 80px;
+    height: 80px;
+    &:hover, &:focus {
+        border-color: #5AC467;
+        color: #5AC467;
+    }
+    i {
+        font-size: 20px;
+        color: #BFBFBF;
+        font-weight: bold;
+    }
+}

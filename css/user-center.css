@@ -1,0 +1,326 @@
+.green {
+  color: #5AC467 !important;
+}
+
+.orange {
+  color: #FF833F !important;
+}
+
+.collect-village {
+  padding-bottom: 40px;
+}
+
+.collect-item {
+  margin-top: 20px;
+}
+
+.collect-item-image {
+  width: 140px;
+  height: 104px;
+  margin-right: 20px;
+}
+
+.collect-item-str {
+  line-height: 1;
+}
+
+.collect-item-title {
+  font-size: 18px;
+  color: #000;
+  margin-top: 16px;
+  margin-bottom: 20px;
+}
+
+.collect-item-addr {
+  font-size: 14px;
+  color: #888;
+}
+
+.collect-item-right {
+  font-size: 16px;
+  color: #5AC467;
+  cursor: pointer;
+}
+
+.password-set {
+  padding: 20px 0 45px;
+}
+
+.password-set .password-item {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #000;
+}
+
+.password-set .password-item-label {
+  width: 93px;
+}
+
+.password-set .password-item-input {
+  height: 40px;
+  width: 180px;
+}
+
+.code {
+  color: #5AC467;
+  font-size: 14px;
+  width: 100px;
+  margin-left: 10px;
+  line-height: 38px;
+  text-align: center;
+  border: 1px solid;
+  cursor: pointer;
+  position: relative;
+}
+
+.code.disabled {
+  color: #A1A1A1;
+}
+
+.password-submit {
+  width: 180px;
+  height: 40px;
+  margin-top: 30px;
+}
+
+.upload-item {
+  margin-bottom: 95px;
+}
+
+.upload-item .el-table td, .upload-item .el-table th {
+  font-size: 14px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0;
+}
+
+.upload-item .el-table thead th, .upload-item .el-table thead tr {
+  background-color: #eee;
+}
+
+.upload-item .total {
+  text-align: right;
+  font-size: 12px;
+  color: #999;
+  margin-top: 12px;
+}
+
+.upload-item .btn-box {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.upload-item .btn-box .btn {
+  width: 80px;
+  height: 40px;
+}
+
+.upload-item .push {
+  width: 116px;
+  height: 40px;
+}
+
+.dialog-content .item {
+  margin-bottom: 30px;
+}
+
+.dialog-content .label {
+  width: 120px;
+  padding-left: 30px;
+}
+
+.dialog-content .input {
+  width: 280px;
+  height: 40px;
+}
+
+.village-manager {
+  margin-top: 40px;
+  margin-bottom: 46px;
+}
+
+.village-manager .add-tag {
+  width: 100px;
+  height: 40px;
+}
+
+.village-manager .map {
+  margin-top: 10px;
+  height: 220px;
+  width: 500px;
+}
+
+.village-manager .z-city {
+  width: 500px;
+  height: 40px;
+}
+
+.village-manager .submit {
+  width: 180px;
+  height: 40px;
+}
+
+.village-manager .submit-box {
+  margin-left: 9px;
+}
+
+.person-info {
+  overflow: hidden;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.person-info .person-left {
+  margin-top: 40px;
+  margin-bottom: 18px;
+}
+
+.person-info .person-item {
+  margin-bottom: 30px;
+}
+
+.person-info .person-item-label {
+  margin-right: 10px;
+}
+
+.person-info .person-item-p {
+  margin-right: 19px;
+}
+
+.person-info .person-item-input {
+  width: 220px;
+  height: 32px;
+  margin-right: 19px;
+}
+
+.person-info .person-item-action-str {
+  color: #5AC467;
+  cursor: pointer;
+}
+
+.person-info .el-upload--picture-card, .person-info .el-upload, .person-info .el-upload-dragger {
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  background-color: #F5F6FA;
+  position: relative;
+}
+
+.person-info .edit-str {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.person-info .edit-default-img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+}
+
+#app {
+  min-height: 100%;
+  padding-top: 80px;
+  background: #F5F6FA;
+}
+
+.pages {
+  margin-top: 17px;
+  margin-bottom: 40px;
+}
+
+.container {
+  width: 990px;
+  margin: auto;
+  padding: 30px 0;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  min-height: calc(100% - 344px);
+}
+
+.user-left {
+  background: #fff;
+  width: 170px;
+  margin-right: 20px;
+}
+
+.user-left-nav {
+  line-height: 50px;
+  text-align: center;
+  font-size: 14px;
+  color: #454444;
+  cursor: pointer;
+}
+
+.user-left-nav.border {
+  border-top: 8px solid #F5F6FA;
+}
+
+.user-left-nav.active {
+  background-color: #5AC467;
+  color: #fff;
+}
+
+.user-right {
+  width: 800px;
+  padding: 0 20px;
+  background-color: #fff;
+}
+
+.user-right .title {
+  line-height: 50px;
+  border-bottom: 1px solid #E5E5E5;
+  font-size: 14px;
+  color: #5AC467;
+}
+
+.user-info-item {
+  margin-bottom: 30px;
+  color: #454444;
+  font-size: 14px;
+}
+
+.user-info-item-label {
+  color: #000000;
+  width: 100px;
+  padding-left: 9px;
+}
+
+.user-info-item-input {
+  height: 40px;
+  width: 240px;
+  margin-right: 10px;
+}
+
+.user-info-item-textarea {
+  width: 500px;
+}
+
+.el-upload--picture-card, .el-upload, .el-upload-dragger {
+  width: 80px;
+  line-height: 80px;
+  height: 80px;
+}
+
+.el-upload--picture-card:hover, .el-upload--picture-card:focus, .el-upload:hover, .el-upload:focus, .el-upload-dragger:hover, .el-upload-dragger:focus {
+  border-color: #5AC467;
+  color: #5AC467;
+}
+
+.el-upload--picture-card i, .el-upload i, .el-upload-dragger i {
+  font-size: 20px;
+  color: #BFBFBF;
+  font-weight: bold;
+}
+/*# sourceMappingURL=user-center.css.map */
