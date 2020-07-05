@@ -5,16 +5,22 @@ const homeTitle = {
             default: ''
         },
         titleStyle: {
+            type: Object,
+            default() {
+                return {}
+            }
+        },
+        subTitle: {
             type: String,
             default: ''
         },
-        subTitle: {
+        btnStr: {
             type: String,
             default: ''
         }
     },
     render(h) {
-        const { title, subTitle } = this;
+        const { title, subTitle, btnStr } = this;
         const children = [h(
             'h2',
             {
@@ -29,7 +35,6 @@ const homeTitle = {
             children.push(h(
                 'p',
                 {
-                    style: this.titleStyle,
                     attrs: {
                         class: 'sub-title'
                     },
@@ -37,6 +42,7 @@ const homeTitle = {
                 subTitle
             ))
         }
+        children.push(this.$slots.default)
         return h(
             'div',
             {

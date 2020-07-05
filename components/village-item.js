@@ -12,6 +12,15 @@ const villageItem = {
         image: {
             type: String,
             default: ''
+        },
+        imageStyle: {
+            type: Object,
+            default() {
+                return {
+                    width: '280px',
+                    height: '210px'
+                }
+            }
         }
     },
     render(h) {
@@ -19,10 +28,7 @@ const villageItem = {
         const children = [h(
             'el-image',
             {
-                style: {
-                    width: '280px',
-                    height: '210px'
-                },
+                style: this.imageStyle,
                 props: {
                     src: image,
                     fit: 'cover'

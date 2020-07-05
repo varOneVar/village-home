@@ -1,0 +1,428 @@
+.home-title {
+  padding-top: 60px;
+  width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 40px;
+  text-align: center;
+  position: relative;
+  line-height: 1;
+}
+
+.home-title .title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #000;
+}
+
+.home-title .sub-title {
+  font-size: 16px;
+  color: #888;
+  margin-top: 22px;
+}
+
+.article-item {
+  width: 580px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 28px;
+  background: #fff;
+}
+
+.article-item-right {
+  padding: 30px 20px 0px 30px;
+  position: relative;
+  line-height: 1;
+}
+
+.article-item-right-title {
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.article-item-right-content {
+  font-size: 14px;
+  color: #888;
+  line-height: 1.2;
+}
+
+.video-wrapper {
+  margin: 0 10px 20px;
+  min-height: 330px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 6px 14px 0px rgba(238, 238, 238, 0.6);
+          box-shadow: 0px 6px 14px 0px rgba(238, 238, 238, 0.6);
+  overflow: hidden;
+}
+
+.video-box {
+  position: relative;
+  width: 380px;
+  height: 260px;
+  overflow: hidden;
+}
+
+.video-num {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  line-height: 1;
+  padding: 7px 15px;
+  font-size: 14px;
+  border-radius: 50px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.video-title {
+  font-size: 16px;
+  color: #000;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+#app {
+  min-height: 100%;
+  padding-top: 80px;
+  background: #F5F6FA;
+}
+
+.toper-area {
+  height: 320px;
+  background-color: #fff;
+  background: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1593880716316&di=b9d2b786e9b93619bb0873545ff64e4e&imgtype=0&src=http%3A%2F%2Fdpic.tiankong.com%2F3a%2Fal%2FQJ6986205256.jpg") no-repeat center;
+  background-size: 100% 100%;
+}
+
+.toper-area .icing {
+  height: 100%;
+  width: 1180px;
+  margin: auto;
+}
+
+.toper-area-image {
+  width: 132px;
+  height: 132px;
+  margin-right: 47px;
+}
+
+.toper-area-info {
+  height: 132px;
+  overflow: hidden;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.toper-area-info_l_title {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.toper-area-info_l .star-wrapper {
+  margin-right: 4px;
+}
+
+.toper-area-info_l .star-wrapper .star {
+  width: 18px;
+  height: 16px;
+  margin-right: 4px;
+}
+
+.toper-area-info_l .str {
+  color: #ccc;
+  font-size: 14px;
+  margin-right: 9px;
+}
+
+.toper-area-info_l .go-comment {
+  color: #FD8238;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.toper-area-info_r {
+  margin-left: 90px;
+}
+
+.toper-area-info_r_btn {
+  display: block;
+  width: 100px;
+  font-weight: bold;
+  line-height: 30px;
+  background-color: #fff;
+  text-align: center;
+  font-size: 13px;
+  color: #000;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.neck-area {
+  width: 1180px;
+  margin: auto;
+  background-color: #fff;
+  padding-top: 40px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  overflow: hidden;
+}
+
+.neck-area_l {
+  width: 800px;
+  margin-right: 20px;
+}
+
+.neck-area_l .addr {
+  line-height: 1;
+  font-size: 16px;
+}
+
+.neck-area_l .collect-icon {
+  width: 22px;
+  height: 16px;
+  margin-right: 4px;
+}
+
+.neck-area_l .collect-str {
+  font-size: 16px;
+  color: #F55247;
+}
+
+.neck-area_r {
+  border: 1px solid #eee;
+  border-top: none;
+  width: 360px;
+  margin-top: 35px;
+}
+
+.neck-area_r_top {
+  height: 40px;
+  background-color: #FF833F;
+  color: #fff;
+  line-height: 40px;
+  padding: 0 20px;
+}
+
+.neck-area_r .myself {
+  padding: 0 20px;
+  height: 100px;
+}
+
+.neck-area_r .myself-image {
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+}
+
+.neck-area_r .myself-name {
+  color: #454444;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.neck-area_r .myself-title {
+  font-size: 12px;
+  color: #666;
+  line-height: 1;
+}
+
+.neck-area_r .rank-box {
+  padding: 0 20px;
+}
+
+.neck-area_r .rank-box-title {
+  border-top: 1px solid #eee;
+  line-height: 43px;
+  text-align: center;
+  color: #4BB759;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.neck-area_r .rank-box-table-header {
+  padding: 0 16px;
+  background-color: #eee;
+  color: #454444;
+  font-size: 14px;
+  line-height: 34px;
+}
+
+.neck-area_r .rank-list-wrapper {
+  height: 350px;
+  overflow: hidden;
+}
+
+.neck-area_r .rank-list {
+  height: 70px;
+  line-height: 70px;
+  font-size: 16px;
+  color: #454444;
+  border-bottom: 1px solid #eee;
+}
+
+.neck-area_r .rank-list-score {
+  width: 72px;
+  text-align: center;
+}
+
+.neck-area_r .rank-list-center_avatar {
+  width: 40px;
+  height: 40px;
+  margin-right: 9px;
+}
+
+.neck-area_r .rank-list-gongxian {
+  color: #5AC467;
+  margin-right: 35px;
+}
+
+.neck-area_r .rank-list-view-more {
+  width: 320px;
+  height: 40px;
+}
+
+.nav-hash {
+  margin: auto;
+  margin-top: 50px;
+  width: 1180px;
+  border: 1px solid #eee;
+  height: 50px;
+  padding: 0 27px;
+  text-align: center;
+}
+
+.nav-hash-item.active a {
+  position: relative;
+  color: #5AC467;
+}
+
+.nav-hash-item.active a:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -16px;
+  background-color: #4BB759;
+  height: 2px;
+  z-index: 2;
+}
+
+.section {
+  overflow: hidden;
+}
+
+.icing {
+  width: 1180px;
+  margin: auto;
+}
+
+.village-addr-title {
+  font-size: 28px;
+  color: #454444;
+}
+
+.village-desc {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 60px;
+}
+
+.create-village-desc {
+  margin-top: 20px;
+}
+
+.picture-item {
+  width: 220px;
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.picture-item:hover {
+  -webkit-box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+}
+
+.picture-item-image {
+  width: 220px;
+  height: 164px;
+}
+
+.picture-item-title {
+  font-size: 16px;
+  color: #000;
+  padding: 15px 10px 25px;
+  line-height: 1;
+}
+
+.article-item {
+  width: 1180px;
+  margin-bottom: 20px;
+}
+
+.article-item-right {
+  padding: 40px 81px 32px 45px;
+}
+
+.article-item-right-title {
+  font-size: 20px;
+  color: #454444;
+  margin-bottom: 20px;
+}
+
+.article-item-right-content {
+  color: #666666;
+  line-height: 1.5;
+}
+
+.article-footer {
+  position: absolute;
+  left: 45px;
+  right: 81px;
+  bottom: 20px;
+  height: 12px;
+  font-size: 12px;
+  color: #666;
+}
+
+.article-footer .icon {
+  margin-right: 4px;
+}
+
+.white {
+  background: #fff;
+}
+
+.gray {
+  background: #F5F6FA;
+}
+
+.add-more {
+  margin: 40px auto 60px;
+  width: 168px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  color: #000;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #888888;
+}
+
+.push-btn {
+  position: absolute;
+  right: 0;
+  bottom: 24px;
+  width: 116px;
+  height: 34px;
+}
+
+.map {
+  height: 500px;
+  margin-top: 20px;
+}
+/*# sourceMappingURL=village-detail.css.map */
