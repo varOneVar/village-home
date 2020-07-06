@@ -2,10 +2,16 @@
     &-title-box {
         height: 59px;
         line-height: 59px;
-        color: #4BB759;
         font-size: 16px;
         padding-left: 78px;
         border-bottom: 1px solid #eee;
+    }
+    &-title {
+        color: #454444;
+        margin-right: 60px;
+        &.active {
+            color: #4BB759;
+        }
     }
     .send-comment-area {
         margin-top: 20px;
@@ -26,8 +32,7 @@
         }
     }
     .send-box {
-        text-align: right;
-        margin-right: 80px;
+        padding:0 80px;
         margin-bottom: 30px;
     }
     .send-btn {

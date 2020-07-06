@@ -1,6 +1,7 @@
 @import './home-title.scss';
 @import './article-item.scss';
 @import './video-item.scss';
+@import './comment-list.scss';
 
 #app {
     min-height: 100%;
@@ -291,4 +292,46 @@
 .map {
     height: 500px;
     margin-top: 20px;
+}
+.chan {
+    background-color: #fff;
+    margin-top: 20px;
+    overflow: hidden;
+    margin-bottom: 60px;
+}
+.pages {
+    margin-top: 17px;
+    margin-bottom: 40px;
+}
+.comment-list {
+    &-title-box {
+        padding-left:40px;
+    }
+    .comment-item {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    .send-comment-area .textarea {
+        width: 1100px;
+    }
+    .send-box {
+        align-items: flex-start;
+        padding: 0 40px;
+    }
+}
+.comment-actions {
+    margin-right: 22px;
+    &-image {
+        width: 20px;
+        height: 20px;
+        margin-right: 6px;
+    }
+    &-str {
+        color: #454444;
+    }
+}
+.push-image {
+    width: 20px;
+    height: 20px;
+    margin-left: 12px;
 }

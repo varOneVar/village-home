@@ -82,6 +82,121 @@
   margin-top: 20px;
 }
 
+.comment-list-title-box {
+  height: 59px;
+  line-height: 59px;
+  font-size: 16px;
+  padding-left: 78px;
+  border-bottom: 1px solid #eee;
+}
+
+.comment-list-title {
+  color: #454444;
+  margin-right: 60px;
+}
+
+.comment-list-title.active {
+  color: #4BB759;
+}
+
+.comment-list .send-comment-area {
+  margin-top: 20px;
+  margin-bottom: 16px;
+}
+
+.comment-list .send-comment-area .textarea {
+  display: block;
+  width: 720px;
+  margin: auto;
+  border-radius: 4px;
+}
+
+.comment-list .send-comment-area .textarea .el-textarea__inner {
+  min-height: 80px;
+  color: #000;
+  background-color: #EEEEEE;
+}
+
+.comment-list .send-comment-area .textarea .el-input__count {
+  background-color: #EEEEEE;
+}
+
+.comment-list .send-box {
+  padding: 0 80px;
+  margin-bottom: 30px;
+}
+
+.comment-list .send-btn {
+  font-size: 14px;
+}
+
+.comment-list .el-button--success.is-disabled {
+  color: #bbb;
+  background-color: #eee;
+  outline: none;
+  border-color: #eee;
+}
+
+.comment-list .comment-item {
+  margin: 0 80px 40px;
+  border-bottom: 1px solid #eee;
+}
+
+.comment-list .comment-item .avatar-warpper {
+  margin-bottom: 20px;
+}
+
+.comment-list .comment-item .avatar-warpper .avatar {
+  margin-right: 17px;
+}
+
+.comment-list .comment-item .avatar-warpper .base-info {
+  height: 40px;
+}
+
+.comment-list .comment-item .avatar-warpper .base-info .name {
+  font-size: 16px;
+  color: #000;
+}
+
+.comment-list .comment-item .avatar-warpper .base-info .time {
+  font-size: 12px;
+  color: #999;
+}
+
+.comment-list .comment-item .content-box {
+  margin-bottom: 20px;
+}
+
+.comment-list .comment-item .content-box .content {
+  color: #454444;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.comment-list .reply-box {
+  overflow: hidden;
+  padding: 20px 10px 0 20px;
+  background: #f5f6fa;
+  border: 1px solid #eeeeee;
+}
+
+.comment-list .reply-item {
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #000;
+  line-height: 1.6;
+}
+
+.comment-list .options {
+  line-height: 50px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-size: 12px;
+  color: #666;
+}
+
 #app {
   min-height: 100%;
   padding-top: 80px;
@@ -424,5 +539,57 @@
 .map {
   height: 500px;
   margin-top: 20px;
+}
+
+.chan {
+  background-color: #fff;
+  margin-top: 20px;
+  overflow: hidden;
+  margin-bottom: 60px;
+}
+
+.pages {
+  margin-top: 17px;
+  margin-bottom: 40px;
+}
+
+.comment-list-title-box {
+  padding-left: 40px;
+}
+
+.comment-list .comment-item {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.comment-list .send-comment-area .textarea {
+  width: 1100px;
+}
+
+.comment-list .send-box {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 0 40px;
+}
+
+.comment-actions {
+  margin-right: 22px;
+}
+
+.comment-actions-image {
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+}
+
+.comment-actions-str {
+  color: #454444;
+}
+
+.push-image {
+  width: 20px;
+  height: 20px;
+  margin-left: 12px;
 }
 /*# sourceMappingURL=village-detail.css.map */
