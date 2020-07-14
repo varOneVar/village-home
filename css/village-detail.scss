@@ -143,15 +143,19 @@
             }
         }
         .rank-list-wrapper {
-            height: 350px;
+            padding-top: 10px;
             overflow: hidden;
         }
         .rank-list {
-            height: 70px;
-            line-height: 70px;
+            height: 62px;
+            line-height: 62px;
             font-size:16px;
             color: #454444;
             border-bottom: 1px solid #eee;
+            &:last-child {
+                height: 68px;
+                line-height: 68px;
+            }
             &-score {
                 width: 72px;
                 text-align: center;

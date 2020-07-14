@@ -34,3 +34,44 @@ function simulateInterval(callback, interval, async = false) {
     }
     return setTimeout(fn, interval)
 }
+
+
+function storage() {
+    const baseKey = 'meilixiangcun__'
+    const storage = window.sessionStorage
+    return {
+        set(key, val) {
+            try {
+                const k = baseKey + key
+                storage.setItem(k, JSON.stringify(val))
+            } catch (error) {
+                console.error('设置缓存错误', error)
+            }
+        },
+        get(key, def) {
+            try {
+                const k = baseKey + key
+                const val = storage.getItem(k)
+                return JSON.parse(val)
+            } catch (error) {
+                console.error('获取缓存错误', error)
+                return def
+            }
+        },
+        remove(key) {
+            try {
+                const k = baseKey + key
+                storage.removeItem(k)
+            } catch (error) {
+                console.error('删除缓存', error)
+            }
+        },
+        clear() {
+            try {
+                storage.clear()
+            } catch (error) {
+                console.error('清空缓存', error)
+            }
+        }
+    }
+}

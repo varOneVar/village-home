@@ -66,7 +66,39 @@
                         <span class="collect-str">收藏</span>
                     </div>
                 </div>
-                <div class="swiper-wrapper"></div>
+                <div class="swiper-icing">
+                  <!-- swiper -->
+                  <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <template>
+                          <div
+                            class="swiper-slide"
+                            v-for="(item, idx) of headerVideoList"
+                            :id="`video-header-${idx}`"
+                            :key="idx"
+                          >
+                          <!-- <el-image /> -->
+                          </div>
+                        </template>
+                    </div>
+                    <div class="swiper-container-thumbs">
+                      <div class="swiper-wrapper">
+                        <div
+                          class="swiper-slide"
+                          v-for="(item, idx) of headerVideoList"
+                          :key="idx"
+                        >
+                          <el-image
+                            :src="item.poster"
+                            fit="cover"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <!-- 如果需要分页器 -->
+                    <div class="swiper-pagination"></div>
+                  </div>
+                </div>
             </div>
             <div class="neck-area_r">
                 <div class="flex-sb-c neck-area_r_top">
@@ -290,8 +322,13 @@
     padding-bottom: 136px;
   }
   .swiper-container {
-    width: 1200px;
-    height: 344px;
+    margin-top: 20px;
+    width: 800px;
+  }
+  .swiper-container-thumbs {
+    margin-top: 6px;
+    width: 800px;
+    height: 60px;
   }
   .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
     width:20px;
@@ -385,7 +422,9 @@
         },
         articleList: [],
         videoList: [],
+        headerVideoList: [],
         vlist: [],
+        hvlist: [],
         commentList: [],
         rankList: [],
         navActiveIdx: 0,
@@ -402,6 +441,7 @@
     },
     mounted() {
       this.vlist = []
+      this.hvlist = []
       this.$nextTick(() => {
         this.videoList.forEach((v,i) => {
           v.forEach((e, j) => {
@@ -412,6 +452,13 @@
             this.vlist.push(video)
           })
         });
+        this.headerVideoList.forEach((v, i) => {
+          const video = videoPlayerInstance(`video-header-${i}`, v.url, v.poster, {
+            width: '800px',
+            height: '480px',
+          })
+          this.hvlist.push(video)
+        })
       })
     },
     created() {
@@ -428,6 +475,7 @@
         num: 28
       }))
       this.videoList = chunkArr(arr, 3)
+      this.headerVideoList = [...arr, ...arr]
       this.rankList = [...Array(4)].map(v => ({
           rank: 1,
           village_name: '瓜皮村',
@@ -486,13 +534,18 @@
 </script>
 <script src="https://unpkg.com/swiper@5.4.5/js/swiper.min.js"> </script>
 <script>
+  const thumbsSwiper = new Swiper('.swiper-container-thumbs', {
+    slidesPerView: 8,
+    spaceBetween: 6,
+    watchSlidesVisibility: true,//防止不可点击
+  });
   const mySwiper = new Swiper ('.swiper-container', {
     // direction: 'horizontal',
-    slidesPerView : 3,
-    slidesPerGroup : 3,
-    spaceBetween : 30,
     bulletActiveClass: 'my-bullet-active',
     bulletClass : 'my-bullet',
+    thumbs: {
+      swiper: thumbsSwiper
+    },
     // loop: true, // 循环模式选项
     // 如果需要分页器
     pagination: {
