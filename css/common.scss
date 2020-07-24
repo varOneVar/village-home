@@ -144,6 +144,22 @@ html, body {
       color: #fff;
     }
   }
+  .is-logined {
+    position: relative;
+    &:hover .active-board{
+      display: block;
+    }
+    .is-logined__avatar {
+      width: 72px;
+      height: 72px;
+    }
+    .active-board {
+      display: none;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+  }
 }
 
 .zfooter {

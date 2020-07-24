@@ -7,6 +7,7 @@ const Zheader = {
   },
   data() {
     return {
+      userinfo: null,
       activeIndex: '1',
       navList: [
         {
@@ -21,10 +22,10 @@ const Zheader = {
             label: 'IOS下载',
             path: './index.html'
           }, {
-              index: '2-2',
-              label: 'Android下载',
-              path: './index.html'
-            }]
+            index: '2-2',
+            label: 'Android下载',
+            path: './index.html'
+          }]
         }, {
           index: '3',
           label: '关于我们',
@@ -37,6 +38,9 @@ const Zheader = {
     handleSelect(index) {
       // this.activeIndex =
     }
+  },
+  created() {
+    this.userinfo = storage().get('userinfo') || null
   },
   template: `
     <div class="zheader">
@@ -79,7 +83,7 @@ const Zheader = {
               </el-menu-item>
             </template>
           </el-menu>
-          <div class="zheader-btn-box">
+          <div class="zheader-btn-box" v-if="!userinfo">
             <a class="zheader-btn"
               :href="status==='login'?'javascript:void(0);':'./login.html'"
              :class="{active:status==='login'||!status}">
@@ -90,6 +94,20 @@ const Zheader = {
               :class="{active:status==='register'}">
               注册
             </a>
+          </div>
+          <div class="is-logined" v-else>
+            <el-avatar class="is-logined__avatar" :src="userInfo.member_head" fit="cover" />
+            <ul class="active-board">
+              <li class="active-board-item">
+                <a class="active-board-item__a" href="">发布内容</a>
+              </li>
+              <li class="active-board-item">
+                <a class="active-board-item__a" href="">个人中心</a>
+              </li>
+              <li class="active-board-item">
+                <a class="active-board-item__a" href="">退出登录</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

@@ -17,7 +17,7 @@
     <template>
       <Zheader status="register" />
     </template>
-    <div class="login-form">
+    <div class="login-form" style="height:460px;">
       <div class="form-title-box flex">
         <p
           class="flex1 text-center form-title-item active"
@@ -40,6 +40,10 @@
             @click="gainVerifyCode">
             {{initTime===60?'获取动态码':`${initTime}s后重发`}}</span>
         </div>
+        <div class="input-item mobile">
+          <span class="label">密码</span>
+          <input class="input" v-model="password" placeholder="请输入密码" />
+        </div>
       <div class="slide-box">
         <div class="slide-text" :class="{success:isSucess}">{{slide}}</div>
         <div class="slide-process" :style="{width:`${processWidth}px`}"></div>
@@ -50,7 +54,7 @@
         :disabled="loginDisabled"
         :type="loginDisabled?'info':'success'"
         @click="submitData"
-      >登录</el-button>
+      >注册</el-button>
       <a class="go-link" href="./login.html"><span style="color:#999;margin-right:7px;">已有账号</span>登录</a>
     </div>
     <div class="login-footer text-center">
@@ -62,138 +66,9 @@
   <script src="https://polyfill.io/v3/polyfill.min.js"></script>
   <script src="https://unpkg.com/element-ui/lib/index.js"></script>
   <script src="./js/utils.js"></script>
+  <script src="./js/api.js"></script>
 </body>
 <script src="./components/Zheader.js"></script>
-<script>
-  const app = new Vue({
-    el: '#login',
-    data() {
-      return {
-        tipShow: false, // 手机号错误提示
-        mobile: '', // 手机
-        verifyCode: '', // 验证码
-        startX: 0, // 按下鼠标起始位置
-        diffX: 0, // 拖动滑块距离
-        initTime: 60, // 发送验证码倒计时
-        processWidth: 0, // 滑块左侧橙快宽度
-        isSucess: false, // 是否拖动滑块成功
-        slide:'拖动滑块验证', // 滑块文字
-        year: new Date().getFullYear()
-      }
-    },
-    methods: {
-      resetData() { // 重置数据
-        this.tipShow = false
-        this.mobile = ''
-        this.verifyCode = ''
-        this.startX = 0
-        this.diffX = 0
-        this.initTime = 60
-        this.processWidth = 0
-        this.isSucess = false
-        this.slide = '拖动滑块验证'
-
-      },
-      submitData() { // 提交数据
-        if (!(/^\d{11}$/.test(this.mobile))) {
-            this.$message.error('请输入正确的手机号！')
-            return;
-          }
-        if (!(/^\d{4}$/.test(this.mobile))) {
-            this.$message.error('请输入正确的验证码！')
-            return;
-          }
-        if (!this.isSucess) {
-          this.$message.error('请拖动滑块验证！')
-          return;
-        }
-        // ELEMENT.Message.error("success");
-      },
-      gainVerifyCode() { // 获取验证码
-        if (!(/^\d{11}$/.test(this.mobile))) {
-          this.$message.error('请输入正确的手机号！')
-          return;
-        }
-        if (this.initTime!==60) return;
-        simulateInterval(() => {
-          if (this.initTime === 0) {
-            this.initTime = 60
-            return true
-          }
-          this.initTime--
-        }, 1000)
-      },
-      verifyMobile() { // 验证手机号提示
-        if (this.mobile && !(/^\d{11}$/.test(this.mobile))) {
-          this.tipShow = true
-        } else {
-          this.tipShow = false
-        }
-      },
-      slideSuccess() { // 滑块滑动成功
-        this.slide = '验证通过'
-        this.isSucess = true
-        const slide = document.getElementById('slide')
-        slide.removeEventListener('mousemove', this.mousemoveHandler)
-        slide.removeEventListener('mouseup', this.mouseupHandler)
-        slide.removeEventListener('mouseleave', this.mouseupHandler)
-        slide.removeEventListener('mousedown', this.mousedownHandler)
-      },
-      getLimitNumber(num, min, max) { // 算滑块松开反应
-        console.log(num, min, max, 'num, min, max')
-        if (num > max) {
-          num = max;
-        } else if (num < min) {
-          num = min;
-        }
-        return num;
-      },
-      mouseupHandler(e) { // 滑块松开鼠标事件
-        if (!this.isSucess) {
-          this.processWidth = 0
-          this.diffX = 0
-        }
-        const slide = document.getElementById('slide')
-        console.log('触发up')
-        slide.removeEventListener('mousemove', this.mousemoveHandler)
-        slide.removeEventListener('mouseup', this.mouseupHandler)
-        slide.removeEventListener('mouseleave', this.mouseupHandler)
-      },
-      mousemoveHandler(event) { // 滑块拖动鼠标事件
-        const moveX = event.clientX;
-        console.log(moveX, 'moveX')
-        console.log(moveX - this.startX, 'moveX - this.startX')
-        this.diffX = this.getLimitNumber(moveX - this.startX, 0, 240);
-        this.processWidth = this.diffX;
-        console.log(this.processWidth)
-        if (this.diffX === 240) {
-            this.slideSuccess();
-        }
-        event.preventDefault();
-      },
-      mousedownHandler(event) { // 滑块按下鼠标事件
-        if (this.isSucess) return;
-        this.startX = event.clientX
-        const slide = document.getElementById('slide')
-        slide.addEventListener('mousemove', this.mousemoveHandler)
-        slide.addEventListener('mouseup', this.mouseupHandler)
-        slide.addEventListener('mouseleave', this.mouseupHandler)
-      },
-    },
-    mounted() {
-      setTimeout(() => {
-        const slide = document.getElementById('slide')
-        slide.addEventListener('mousedown', this.mousedownHandler)
-      }, 200);
-    },
-    computed: {
-      loginDisabled() {
-        return !this.mobile || !this.verifyCode || !this.isSucess
-      }
-    },
-    components: { Zheader }
-  })
-
-</script>
+<script charset="utf-8" src="./pagejs/register.js?v=1.0.1"></script>
 
 </html>

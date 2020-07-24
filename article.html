@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="https://unpkg.com/normalize.css/normalize.css" />
   <link rel="stylesheet" href="./css/common.css" />
   <link rel="stylesheet" href="./css/article.css" />
-
 </head>
 
 <body>
@@ -82,6 +81,7 @@
   <script src="https://polyfill.io/v3/polyfill.min.js"></script>
   <script src="https://unpkg.com/element-ui/lib/index.js"></script>
   <script src="./js/utils.js"></script>
+  <script src="./js/api.js"></script>
 </body>
 <script src="./components/Zheader.js"></script>
 <script src="./components/Zfooter.js"></script>
@@ -112,35 +112,5 @@
     height: 40px;
 }
 </style>
-<script>
-  const app = new Vue({
-    el: '#app',
-    data(){
-      return {
-        search: '',
-        value: [],
-        articleList: [],
-      }
-    },
-    methods: {
-        handleChange(value) {
-            console.log(value);
-        }
-    },
-    created() {
-      this.articleList = [...Array(5)].map(v => ({
-        image: 'http://stc.zjol.com.cn/g1/M001956CggSDVoNReiAJiyUAAcKaKSFtLQ149.jpg',
-        title: '塔河岸边罗布人 沙海深处驼铃韵...',
-        content: '7年是以北欧极简主义的风格来设计的。我喜欢简单的人，简单的生活。简单而不平凡这就是我人生的理想。在每个房间风格上我们都采用了不一样的设计风格。同时我们爱丽江。也爱这里的乡土弄清，所以让客人们能在这里感受简单和不平凡的生活品质外，也能感受到丽江当地的特色与氛氛围。'
-        }))
-    },
-    components: {
-      Zheader,
-      Zfooter,
-      'article-item': articleItem,
-      'z-aside':Zaside
-    }
-  })
-
-</script>
+  <script charset="utf-8" src="./pagejs/article.js?v=1.0.1"></script>
 </html>
